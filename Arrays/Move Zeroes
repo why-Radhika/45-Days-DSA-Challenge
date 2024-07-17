@@ -1,0 +1,20 @@
+// Leetcode 283 - Easy
+class Solution {
+    public void moveZeroes(int[] arr) {
+        int n = arr.length;
+        int j = 0;
+
+        // Traverse through all elements
+        for (int i = 0; i < n; i++) {
+            // If element is non-zero, move it to the front
+            if (arr[i] != 0) {
+                arr[j] = arr[i];
+                // If i is not equal to j, then mark arr[i] as 0
+                if (i != j) {
+                    arr[i] = 0;
+                }
+                j++;
+            }
+        }
+    }
+}
